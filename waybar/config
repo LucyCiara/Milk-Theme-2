@@ -29,7 +29,7 @@
   },
   "clock": {
     "fixed-center": true,
-    "format": "󰅐 {:%A, %d %b - %H:%M}",
+    "format": "{:%A, %d %b - %H:%M}",
     "tooltip": false
     
   },
@@ -62,14 +62,16 @@
     },
     "tooltip": false,
     "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "󰂄{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
     "format-alt": "{icon} {time}",
-    "format-full": "󱈑 {capacity}%",
+    "format-full": "{capacity}%",
     "format-icons": [
-      "󱊡",
-      "󱊢",
-      "󱊣"
+      "",
+      "",
+      "",
+      "",
+      ""
     ]
   }
 }
