@@ -35,7 +35,10 @@ window#waybar {
     transition-duration: 120ms;
 }
 
-#clock,
+#clock {
+    background-image: linear-gradient(to bottom, #52263f 100%);
+    color: #ead9bb;
+}
 
 #pulseaudio:hover {
     background-image: linear-gradient(to bottom, #79B0B1 100%);
@@ -76,7 +79,7 @@ window#waybar {
 
 #workspaces button:hover {
     transition-duration: 120ms;
-    color: #ac3231;
+    color: #79B0B1;
 }
 #workspaces button.focused {
     color: #ac3231;
