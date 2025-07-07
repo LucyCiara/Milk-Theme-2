@@ -14,9 +14,9 @@
 
     "modules-right": [
     "network",
+    "tray",
     "pulseaudio",
-    "battery",
-    "tray"
+    "battery"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -38,7 +38,8 @@
     "format-ethernet": " {ifname}",
     "format-disconnected": "󰤮 No Network",
     "interval": 5,
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "pgrep nm-applet >/dev/null 2>&1 && killall nm-applet || nm-applet"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -52,7 +53,8 @@
     ],
     "nospacing": 1,
     "format-muted": " ",
-    "on-click": "pavucontrol",
+    "on-click": "eww open --toggle audio",
+    "on-click-right": "pavucontrol",
     "tooltip": false
   },
   "battery": {
