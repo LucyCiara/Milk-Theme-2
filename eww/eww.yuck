@@ -1,0 +1,20 @@
+; (defvar outputVolume
+;     "awk -F'[][]' '/Left:/ {printf substr($2, 1, length($2)-1)}' <(amixer sget Master)")
+
+(defwindow audio
+    :monitor 0
+    :geometry
+    (geometry :x "0px"
+            :y "0px"
+            :anchor "top right"
+            :width "270px"
+            :height "60px")
+    (audioScale))
+
+(defwidget audioScale []
+    (box :orientation "v"
+    (scale :onchange "amixer sset Master {}%"
+           :min 0
+           :max 101
+           :value "awk -F'[][]' '/Left:/ {printf substr($2, 1, length($2)-1)}' <(amixer sget Master)"
+           :active true)))
