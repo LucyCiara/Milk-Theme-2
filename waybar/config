@@ -13,8 +13,8 @@
     "modules-center": ["clock"],
 
     "modules-right": [
-    "network",
     "tray",
+    "network",
     "pulseaudio",
     "battery"
   ],
@@ -39,7 +39,8 @@
     "format-disconnected": "󰤮 No Network",
     "interval": 5,
     "tooltip": false,
-    "on-click": "pgrep nm-applet >/dev/null 2>&1 && killall nm-applet || nm-applet"
+    "on-click": "pgrep nm-applet >/dev/null 2>&1 && killall nm-applet || nm-applet",
+    "on-click-right": "pgrep nm-connection-editor >/dev/null 2>&1 && killall -9 nm-connection-editor || nm-connection-editor"
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -54,7 +55,7 @@
     "nospacing": 1,
     "format-muted": " ",
     "on-click": "eww open --toggle audio",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pgrep pavucontrol >/dev/null 2>&1 && killall pavucontrol || pavucontrol",
     "tooltip": false
   },
   "battery": {

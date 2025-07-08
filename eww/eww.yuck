@@ -1,5 +1,4 @@
-; (defvar outputVolume
-;     "awk -F'[][]' '/Left:/ {printf substr($2, 1, length($2)-1)}' <(amixer sget Master)")
+(defpoll outputVolume :interval "30ms" `awk -F'[][]' '/Left:/ { printf substr($2, 1, length($2)-1)}' <(amixer sget Master)`)
 
 (defwindow audio
     :monitor 0
@@ -16,5 +15,5 @@
     (scale :onchange "amixer sset Master {}%"
            :min 0
            :max 101
-           :value "awk -F'[][]' '/Left:/ {printf substr($2, 1, length($2)-1)}' <(amixer sget Master)"
+           :value outputVolume
            :active true)))
