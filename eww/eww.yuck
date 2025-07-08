@@ -3,17 +3,21 @@
 (defwindow audio
     :monitor 0
     :geometry
-    (geometry :x "0px"
-            :y "0px"
-            :anchor "top right"
-            :width "270px"
-            :height "60px")
+    (geometry
+        :x "0px"
+        :y "0px"
+        :anchor "top right"
+        :width "200px")
+        
     (audioScale))
 
 (defwidget audioScale []
-    (box :orientation "v"
-    (scale :onchange "amixer sset Master {}%"
-           :min 0
-           :max 101
-           :value outputVolume
-           :active true)))
+    (box    
+        :orientation "h"
+        ; (label :text "")
+    (scale  
+        :onchange "amixer sset Master {}%"
+        :min 0
+        :max 101
+        :value outputVolume
+        :active true)))
