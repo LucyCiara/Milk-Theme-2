@@ -7,4 +7,9 @@
 !waybar/
 !wofi/
 !eww/
+!Vencord/
+Vencord/*
+!Vencord/themes
+Vencord/themes/*
 !Vencord/themes/Milk.theme.css
+
