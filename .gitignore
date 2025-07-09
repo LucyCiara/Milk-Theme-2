@@ -7,9 +7,16 @@
 !waybar/
 !wofi/
 !eww/
+
 !Vencord/
 Vencord/*
 !Vencord/themes
 Vencord/themes/*
 !Vencord/themes/Milk.theme.css
+
+!spicetify/
+spicetify/*
+!spicetify/Themes
+spicetify/Themes/*
+!spicetify/Themes/Milk/
 
