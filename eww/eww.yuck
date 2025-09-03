@@ -16,7 +16,7 @@
         :orientation "h"
         ; (label :text "")
     (scale  
-        :onchange "amixer sset Master {}%"
+        :onchange "amixer set Master unmute; amixer sset Master {}%"
         :min 0
         :max 101
         :value outputVolume
