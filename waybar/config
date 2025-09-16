@@ -36,7 +36,7 @@
   "network": {
     "format-wifi": " {essid}",
     "format-ethernet": " {ifname}",
-    "format-disconnected": "󰤮 No Network",
+    "format-disconnected": " No Network",
     "interval": 5,
     "tooltip": false,
     "on-click": "pgrep nm-applet >/dev/null 2>&1 && killall nm-applet || nm-applet",
@@ -53,7 +53,7 @@
       " "
     ],
     "nospacing": 1,
-    "format-muted": " ",
+    "format-muted": "",
     "on-click": "eww open --toggle audio",
     "on-click-right": "pgrep pavucontrol >/dev/null 2>&1 && killall pavucontrol || pavucontrol",
     "tooltip": false
