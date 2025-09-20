@@ -53,7 +53,7 @@
       " "
     ],
     "nospacing": 1,
-    "format-muted": "",
+    "format-muted": " Muted",
     "on-click": "eww open --toggle audio",
     "on-click-right": "pgrep pavucontrol >/dev/null 2>&1 && killall pavucontrol || pavucontrol",
     "tooltip": false
